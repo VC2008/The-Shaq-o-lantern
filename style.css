@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation: rotate 10s infinite;
 }
 .container {
     display: flex;
@@ -17,13 +18,14 @@ body {
 .pumpkin {
     height: 11em;
     width: 15em;
-    background: #f68632;
-    border: 0.4em solid #a14907;
+    background: #8d430a;
+    border: 0.4em solid #ffe600;
     border-radius: 70%/110%;
     position: relative;
-    box-shadow: inset 0 0px 20px #a14907, 0 0 30px -4px red;
+    box-shadow: inset 0 0px 20px #ffe600, 0 0 30px -4px rgb(255, 241, 159);
     z-index: 1;
-    animation: float 3s infinite;
+    animation: skew 1s infinite;
+   
 }
 .pumpkin .texture {
     height: 10.8em;
@@ -44,8 +46,8 @@ body {
     bottom: -0.4em;
     left: -2.5em;
     border-radius: 70%/130%;
-    border-bottom: 0.5em solid #a14907;
-    border-top: 0.5em solid #a14907;
+    border-bottom: 0.5em solid #ffe600;
+    border-top: 0.5em solid #ffe600;
   }
   .pumpkin .root {
     background: #517f54;
@@ -70,20 +72,20 @@ body {
     right: 3.7em;
     transform: rotate(30deg);
     border-bottom: 2.1em solid transparent;
-    border-left: 2.4em solid #401d03;
+    border-left: 2.4em solid #79089b;
   }
   .pumpkin .eye.left {
     left: 3.7em;
     transform: rotate(-30deg);
     border-bottom: 2.1em solid transparent;
-    border-right: 2.4em solid #401d03;
+    border-right: 2.4em solid #79089b;
   }
   .pumpkin .mouth {
     width: 4em;
     height: 2em;
     position: absolute;
     bottom: 1.5em;
-    border-bottom: 1em solid #401d03;
+    border-bottom: 1em solid #79089b;
   }
   .pumpkin .mouth.right {
     right: 3.6em;
@@ -101,7 +103,7 @@ body {
     left: 7.25em;
     border-top: 0.8em solid transparent;
     border-bottom: 0em solid transparent;
-    border-left: 0.8em solid #401d03;
+    border-left: 0.8em solid #79089b;
   }
   .pumpkin .teeth:before, .pumpkin .teeth:after {
     content: "";
@@ -116,14 +118,14 @@ body {
     top: -0.65em;
     transform: rotate(30deg);
     border-bottom: 0.5em solid transparent;
-    border-left: 1em solid #401d03;
+    border-left: 1em solid #79089b;
   }
   .pumpkin .teeth:after {
     left: 1em;
     top: -0.85em;
     transform: rotate(30deg);
     border-bottom: 0.5em solid transparent;
-    border-left: 1em solid #401d03;
+    border-left: 1em solid #79089b;
   }
  .shadow {
     margin: 10% auto 0;
@@ -131,21 +133,19 @@ body {
     width: 230px;
     height: 50px;
     border-radius: 50%;
-    animation: zoom 3s infinite;
+    animation: zoom 6s infinite;
   }
-  @keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10%);
-    }
+  @keyframes skew{
+    0% {transform: skew(0deg);}
+    100%{transform: skew(900deg);}
   }
-  @keyframes zoom {
-      0%, 100% {
-          transform: scale(1);
-      }
-      50% {
-          transform: scale(0.8);
-      }
+  @keyframes rotate{
+    0%  {transform: rotate(0deg);}
+    25% {transform: rotate(900deg);}
+    50% {transform: rotate(1800deg);}
+    75% {transform: rotate(2700deg);}
+    100% { transform: rotate(3600deg);}
+  }
+  h1{
+    background-color: white;
   }
