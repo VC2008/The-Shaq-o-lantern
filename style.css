@@ -9,6 +9,7 @@ body {
     overflow: hidden;
     animation: rotate 10s infinite;
 }
+/* The consequences of letting Vincent edit keyframes*/
 .container {
     display: flex;
     justify-content: center;
